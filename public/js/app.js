@@ -8,8 +8,12 @@ weatherForm.addEventListener("submit", e => {
   e.preventDefault();
   const location = search.value;
   message.textContent = "";
+
+  const url = window.location.host; /* 获取主机地址 */
+  alert(url); /* http://127.0.0.1/ */
+
   // http://45.76.153.107
-  fetch("http://localhost:3000/weather?city=" + location).then(res => {
+  fetch("http://" + url + "/weather?city=" + location).then(res => {
     res.json().then(data => {
       if (data.error) {
         console.log(data.error);
