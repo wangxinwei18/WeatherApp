@@ -20,7 +20,7 @@ const getWeatherInfo = (address, callback) => {
           data.current.weather_descriptions[0] +
           " temperature is: " +
           data.current.temperature +
-          "C"
+          " ℃"
       );
     }
   });

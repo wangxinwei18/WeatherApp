@@ -40,10 +40,13 @@ app.get("/weather", (req, res) => {
       error: "You must provide a city."
     });
   }
-  console.log(city);
+  // console.log(city);
   getWeatherInfo(city, (error, data) => {
-    console.log("Error", error);
-    console.log("Data", data);
+    if (error) {
+      console.log("Error", error);
+    } else {
+      console.log("Data", data);
+    }
 
     res.send({
       data: data

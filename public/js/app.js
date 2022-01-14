@@ -10,7 +10,6 @@ weatherForm.addEventListener("submit", e => {
   message.textContent = "";
 
   const url = window.location.host; /* 获取主机地址 */
-  alert(url); /* http://127.0.0.1/ */
 
   // http://45.76.153.107
   fetch("http://" + url + "/weather?city=" + location).then(res => {
