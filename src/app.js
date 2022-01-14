@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const cors = require("cors");
 const hbs = require("hbs");
 
 const getWeatherInfo = require("./utils/getweatherinfo");
@@ -15,7 +14,6 @@ hbs.registerPartials(partialsPath);
 
 const publicDirPath = path.join(__dirname, "../public");
 app.use(express.static(publicDirPath));
-app.use(cors());
 
 app.get("", (req, res) => {
   res.render("index", {
