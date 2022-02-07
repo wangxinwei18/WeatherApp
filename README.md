@@ -60,3 +60,4 @@ sudo apt-get install jenkins
 Install suggested plugins
 
 首次需要新建一个用户和密码登录 jenkins
+首次需要新建一个用户和密码登录 jenkins 需要检查云服务器是否安装 git
